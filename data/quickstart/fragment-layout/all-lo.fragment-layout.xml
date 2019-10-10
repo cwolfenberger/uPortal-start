@@ -36,7 +36,7 @@
             <channel fname="personalization-gallery" unremovable="false" hidden="false" immutable="false" ID="n42"/>
         </folder>
         <folder ID="s100" hidden="false" immutable="true" name="Header Right folder" type="header-right" unremovable="true">
-            <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n110"/>
+            <!-- <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n110"/> -->
         </folder>
         <folder ID="s200" hidden="false" immutable="true" name="Header Bottom folder" type="header-bottom" unremovable="true">
             <channel fname="emergency-alert" unremovable="false" hidden="false" immutable="false" ID="n210"/>

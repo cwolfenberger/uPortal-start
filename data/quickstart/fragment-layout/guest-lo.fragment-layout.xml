@@ -35,10 +35,13 @@
         <folder ID="s40" hidden="true" immutable="true" name="Customize folder" type="customize" unremovable="true">
             <channel fname="personalization-gallery" unremovable="false" hidden="false" immutable="false" ID="n42"/>
         </folder>
-        <folder ID="s100" hidden="false" immutable="true" name="Eyebrow folder" type="eyebrow" unremovable="true">
+<!--        <folder ID="s100" hidden="false" immutable="false" name="Eyebrow folder" type="eyebrow" unremovable="true">-->
+<!--            <channel fname="login-launcher" unremovable="false" hidden="false" immutable="false" ID="n8"/>-->
+<!--        </folder>-->
+        <folder ID="s100" hidden="false" immutable="false" name="Header Right folder" type="header-right" unremovable="true">
             <channel fname="login-launcher" unremovable="false" hidden="false" immutable="false" ID="n8"/>
         </folder>
-        <folder ID="s1000" hidden="false" immutable="false" name="Welcome" type="regular" unremovable="false">
+        <folder ID="s1000" hidden="false" immutable="false" name="Welcome" type="regular" unremovable="true">
             <structure-attribute>
                 <name>externalId</name>
                 <value>welcome</value>
@@ -60,6 +63,10 @@
                 <channel fname="portal-activity" unremovable="false" hidden="false" immutable="false" ID="n1220"/>
                 <channel fname="please-register" unremovable="false" hidden="false" immutable="false" ID="n1230"/>
             </folder>
+        </folder>
+        <folder ID="s200" hidden="false" immutable="false" name="Sidebar" type="sidebar-right" unremovable="true">
+            <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n210"/>
+            <channel fname="sidebar-nav" unremovable="false" hidden="false" immutable="false" ID="n220"/>
         </folder>
     </folder>
 </layout>
