@@ -37,12 +37,19 @@
         <folder ID="s40" hidden="true" immutable="true" name="Customize folder" type="customize" unremovable="true">
             <channel fname="personalization-gallery" unremovable="false" hidden="false" immutable="false" ID="n42"/>
         </folder> -->
-        <folder ID="s100" hidden="false" immutable="true" name="Eyebrow folder" type="eyebrow" unremovable="true">
-            <channel fname="waffle-menu" unremovable="false" hidden="false" immutable="false" ID="n110"/>
-            <channel fname="notification-icon" unremovable="false" hidden="false" immutable="false" ID="n120"/>
-            <channel fname="portal-greeting" unremovable="false" hidden="false" immutable="false" ID="n130"/>
-            <channel fname="logout-launcher" unremovable="false" hidden="false" immutable="false" ID="n140"/>
-            <channel fname="session-timeout" unremovable="false" hidden="false" immutable="false" ID="n150"/>
+        <folder ID="s100" hidden="true" immutable="true" name="Eyebrow folder" type="eyebrow" unremovable="true">
+<!--            <channel fname="waffle-menu" unremovable="false" hidden="false" immutable="false" ID="n110"/>-->
+<!--            <channel fname="notification-icon" unremovable="false" hidden="false" immutable="false" ID="n120"/>-->
+<!--&lt;!&ndash;            <channel fname="portal-greeting" unremovable="false" hidden="false" immutable="false" ID="n130"/>&ndash;&gt;-->
+<!--            <channel fname="logout-launcher" unremovable="false" hidden="false" immutable="false" ID="n140"/>-->
+<!--            <channel fname="session-timeout" unremovable="false" hidden="false" immutable="false" ID="n150"/>-->
+        </folder>
+        <folder ID="s200" hidden="false" immutable="true" name="Header Right folder" type="header-right" unremovable="true">
+            <channel fname="waffle-menu" unremovable="false" hidden="false" immutable="false" ID="n210"/>
+            <channel fname="notification-icon" unremovable="false" hidden="false" immutable="false" ID="n220"/>
+            <channel fname="portal-greeting" unremovable="false" hidden="false" immutable="false" ID="n230"/>
+            <channel fname="logout-launcher" unremovable="false" hidden="false" immutable="false" ID="n240"/>
+            <channel fname="session-timeout" unremovable="false" hidden="false" immutable="false" ID="n250"/>
         </folder>
         <folder ID="s300" hidden="false" immutable="true" name="Customize folder" type="customize" unremovable="true">
             <channel fname="personalization-gallery" unremovable="false" hidden="false" immutable="false" ID="n310"/>

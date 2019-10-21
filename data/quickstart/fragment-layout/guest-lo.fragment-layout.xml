@@ -64,9 +64,9 @@
                 <channel fname="please-register" unremovable="false" hidden="false" immutable="false" ID="n1230"/>
             </folder>
         </folder>
-        <folder ID="s200" hidden="false" immutable="false" name="Sidebar" type="sidebar-right" unremovable="true">
-            <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n210"/>
-            <channel fname="sidebar-nav" unremovable="false" hidden="false" immutable="false" ID="n220"/>
-        </folder>
+<!--        <folder ID="s200" hidden="false" immutable="false" name="Sidebar" type="sidebar-right" unremovable="true">-->
+<!--            <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n210"/>-->
+<!--            <channel fname="sidebar-nav" unremovable="false" hidden="false" immutable="false" ID="n220"/>-->
+<!--        </folder>-->
     </folder>
 </layout>

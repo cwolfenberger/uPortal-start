@@ -39,7 +39,22 @@
  * DO NOT MODIFY directly tags.less for your customSkin
  */
 
+/**
+ * General overrides
+ */
+.fa.fa-sign-in:before {
+  content: "\f2f6" !important;
+}
+.fa.fa-sign-out:before {
+  content: "\f2f5" !important;
+}
+
+/**
+ * Portal overrides
+ */
 .portal {
+  font-family: @font-base;
+
   #portalPageBody::before {
     background-image: none;
     background: #F5F6F7;
@@ -47,48 +62,308 @@
   .portal-header {
     background: white;
 
+    .up-portlet-control {
+      color: black !important;
+    }
+
     #up-sticky-nav {
+      color: @color3;
+
       .row {
+        padding: 0;
         background: white;
         box-shadow: none;
         border: none;
       }
     }
-    .portal-logo {
-      margin: 0 !important;
+    #region-header-right {
+      vertical-align: middle;
+      height: 45px;
 
-      h1 {
-        margin: 0;
+      .up-portlet-wrapper {
+        display: inline-block;
+        margin-top: 0 !important;
+        margin-left: 1.5rem;
+        vertical-align: middle;
+        line-height: 45px;
+
+        .notification-icon .btn-icon {
+          color: var(--notif-icon-fg-color, @grayscale4) !important;
+        }
+      }
+    }
+    .portal-nav {
+      .list-group-item {
+        background: @grayscale4;
+
+        &.active {
+          background: @color3 !important;
+          color: white;
+          border-radius: 5px !important;
+        }
+        &:not(.active) {
+          color: @color3;
+
+          a {
+            color: @color3;
+          }
+        }
+      }
+    }
+    .portal-header-main {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      .user-name {
+        background: @color3;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-align: center;
+        visibility: hidden;
+        font-size: 18px;
+
+        .hidden-xs {
+          display: none !important;
+        }
+      }
+    }
+    .portal-logo {
+      display: none;
+      color: @color3 !important;
+      margin: 0 !important;
+      font-size: 30px;
+      vertical-align: middle;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
+      @media screen and (min-width: 990px) {
+        font-size: 40px;
+      }
+
+      h1.portal-logo {
+        color: @color3 !important;
+        margin: 0 !important;
         line-height: 1;
+        font-size: 30px;
+        font-family: serif;
+        text-shadow: none;
+        vertical-align: middle;
+
+        @media screen and (min-width: 990px) {
+          font-size: 40px;
+        }
+
+        a {
+          color: @color3 !important;
+          font-family: @font-title;
+          text-transform: uppercase;
+          vertical-align: middle;
+        }
+        img {
+          max-height: 30px;
+          width: auto;
+
+          @media screen and (min-width: 990px) {
+            max-height: 45px;
+          }
+        }
       }
     }
     .portal-login {
       a {
-        color: #011F5B;
+        color: @color3;
       }
     }
     .portal-nav {
-      background: gray;
+      background: #c2c6c8 !important;
+    }
+  }
+  section.emergency-alert {
+    margin-bottom: 0;
 
-      .portal-navigation {
-        background: @grayscale4;
-
-        &.active {
-          background: #011F5B;
-          color: white;
-          border-radius: 5px !important;
-        }
-      }
+    .view-alert {
+      margin-bottom: 1em;
     }
   }
   .up-portlet-titlebar.up-standard-chrome {
     background: #b2c6db;
   }
-}
-#region-sidebar-right {
-  padding: 15px;
-  background-color: #435982;
+  .portlet-title {
+    padding: 12px !important;
+    font-size: 1.6em !important;
+    line-height: 1.2em !important;
+  }
+  #portalPageBodyColumns {
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
+    @media screen and (min-width: 991px) {
+      padding: 0 15px;
+    }
+  }
+  #portalPageBody {
+    > .container-fluid {
+      > .row {
 
-  .sidebar-nav {
+        @media screen and (min-width: 991px) {
+          display: flex;
+          justify-content: stretch;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * sidebar mobile toggle
+ */
+.sidebar-mobile-toggle {
+  display: block;
+  color: black;
+  width: auto;
+
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+
+  &__container {
+    text-align: right;
+    width: auto;
+  }
+  &__button {
+    color: black;
+
+    &.is-open {
+      margin-right: 260px;
+    }
+  }
+}
+
+/**
+ * Custom sidebar styles
+ */
+#region-sidebar-right {
+  position: absolute;
+  background-color: #435982;
+  top: 0;
+  min-height: 100%;
+  padding: 15px;
+  z-index: 100;
+
+  @media screen and (max-width: 990px) {
+    width: 260px;
+    right: -260px;
+  }
+  @media screen and (min-width: 991px) {
+    position: relative;
+    min-width: 260px;
+    right: 0;
+  }
+
+  &.is-open {
+    right: 0;
+  }
+}
+#webSearchContainer {
+  margin: 10px 0 25px;
+}
+
+/**
+ * Sticky nav style hard override
+ */
+#up-sticky-nav {
+  position: absolute !important;
+  top: 30px !important;
+  left: 15px !important;
+  width: auto !important;
+  background: none !important;
+}
+
+/**
+ * Custom Rice footer styles
+ */
+#region-footer-first {
+  border-top: 1px solid rgba(0,0,0,.35);
+}
+.rice-footer {
+  font-size: 14px;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  nav {
+    margin-bottom: 1rem;
+  }
+  .sponsor {
+    margin: 1rem 0;
+  }
+  .license-icons {
+    font-size: 2em;
+
+    a:hover, a:focus {
+      text-decoration: none;
+    }
+  }
+  .social-media {
+    font-size: 2em;
+
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+  }
+}
+
+/**
+ * Custom info box for the sidebar
+ */
+.rice-info-box {
+  background-color: #042158;
+  color: white;
+  padding: 10px 8px;
+  border-radius: 5px;
+
+  h6 {
+    margin: 0 0 15px;
+    font-family: @font-title;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .button {
+    display: block;
+    background-color: #194f9a;
+    color: white;
+    padding: 10px;
+    margin: 0 0 10px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  a {
+    color: #aadbf6;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Hard Overrides
+ */
+.portal .up-portlet-titlebar.up-standard-chrome .portlet-controls .portlet-options-menu > a {
+  padding: 14px 9px !important;
+}
+.portal .row-offcanvas.up-use-tabs-sm #wrapper .portal-nav .sidebar-offcanvas ul.menu {
+  @media screen and (min-width: 768px) {
+    margin-left: 30px !important;
+  }
+
+  .list-group-item {
+    @media screen and (min-width: 768px) {
+      border-radius: 5px !important;
+    }
   }
 }

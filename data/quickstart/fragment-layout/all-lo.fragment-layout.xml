@@ -42,18 +42,25 @@
             <channel fname="emergency-alert" unremovable="false" hidden="false" immutable="false" ID="n210"/>
         </folder>
         <folder ID="s400" hidden="false" immutable="true" name="Pre Content folder" type="pre-content" unremovable="true">
-            <channel fname="tips" unremovable="false" hidden="false" immutable="false" ID="n410"/>
-            <channel fname="feedback-navigation" unremovable="true" hidden="true" immutable="false" ID="n420"/>
+<!--            <channel fname="tips" unremovable="false" hidden="false" immutable="false" ID="n410"/>-->
+<!--            <channel fname="feedback-navigation" unremovable="true" hidden="true" immutable="false" ID="n420"/>-->
+            <channel fname="sidebar-mobile-toggle" unremovable="true" hidden="false" immutable="false" ID="n430"/>
         </folder>
         <folder id="s500" hidden="false" immutable="true" name="First Footer" type="footer-first" unremovable="true">
-            <channel fname="sitemap" unremovable="true" hidden="false" immutable="false" ID="n510"/>
+<!--            <channel fname="sitemap" unremovable="true" hidden="false" immutable="false" ID="n510"/>-->
+            <channel fname="rice-footer" unremovable="true" hidden="false" immutable="false" ID="n520"/>
         </folder>
-	<folder id="s600" hidden="false" immutable="true" name="Legal Footer" type="footer-second" unremovable="true">
-            <channel fname="legal-footer" unremovable="true" hidden="false" immutable="false" ID="n610"/>
+        <folder id="s600" hidden="true" immutable="true" name="Legal Footer" type="footer-second" unremovable="true">
+            <!--            <channel fname="legal-footer" unremovable="true" hidden="false" immutable="false" ID="n610"/>-->
         </folder>
         <folder ID="s700" hidden="false" immutable="true" name="Page Bottom folder" type="page-bottom" unremovable="true">
             <channel fname="attachments" unremovable="true" hidden="false" immutable="false" ID="n710"/>
             <channel fname="google-analytics-config" unremovable="true" hidden="false" immutable="false" ID="n720"/>
+        </folder>
+        <folder ID="s800" hidden="false" immutable="false" name="Sidebar" type="sidebar-right" unremovable="true">
+            <channel fname="search-launcher" unremovable="false" hidden="false" immutable="false" ID="n810"/>
+            <channel fname="sidebar-nav" unremovable="false" hidden="false" immutable="false" ID="n820"/>
+            <channel fname="rice-info-box" unremovable="false" hidden="false" immutable="false" ID="n830"/>
         </folder>
     </folder>
 </layout>

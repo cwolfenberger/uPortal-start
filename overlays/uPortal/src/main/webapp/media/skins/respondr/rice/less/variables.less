@@ -32,7 +32,7 @@
 @grayscale5:  #ADADAD;
 @grayscale6:  #999999;
 @grayscale7:  #8C8C8C;
-@grayscale8:  #696969;
+@grayscale8:  #6d757c;
 @grayscale9:  #404040;
 @grayscale10: #333333;
 
@@ -115,9 +115,19 @@
  * 2) The value must be on the same line as the variable name and be terminated with a semicolon due to
  *    regex searches by skin manager.
  */
-@color6: #E5E5E5;  // lighter gray
+@color6: #dfe3e6;  // lighter gray
 
 @border: 1px solid @grayscale2;
+
+/**
+ * Fonts
+ */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Lato:300,400,700&display=swap');
+@import (css) "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
+
+@font-base:			'Lato', sans-serif;
+@font-title:		'Cormorant Garamond', serif;
+@font-subtitle:		'Cormorant Garamond', serif;
 
 /**
  * Link colors
@@ -142,11 +152,11 @@
 @header-text-color: @white;
 @header-link-color: @white;
 
-@footer-background-color: @color5;
-@footer-secondary-background-color: lighten(@color5, 10%);
-@footer-text-color: @color4-light;
-@footer-link-color: @color4-lighter;
-@footer-link-hover-color: @white;
+@footer-background-color: @color6;
+@footer-secondary-background-color: lighten(@color6, 10%);
+@footer-text-color: @grayscale8;
+@footer-link-color: #000000;
+@footer-link-hover-color: #333333;
 
 /**
  * Page-level styles

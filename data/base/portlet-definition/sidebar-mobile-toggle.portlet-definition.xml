@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+    Licensed to Apereo under one or more contributor license
+    agreements. See the NOTICE file distributed with this work
+    for additional information regarding copyright ownership.
+    Apereo licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License.  You may obtain a
+    copy of the License at the following location:
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<portlet-definition version="4.0" xsi:schemaLocation="https://source.jasig.org/schemas/uportal/io/portlet-definition https://source.jasig.org/schemas/uportal/io/portlet-definition/portlet-definition-4.0.xsd" xmlns:ns2="https://source.jasig.org/schemas/uportal" xmlns="https://source.jasig.org/schemas/uportal/io/portlet-definition" xmlns:ns4="https://source.jasig.org/schemas/uportal/io/user" xmlns:ns3="https://source.jasig.org/schemas/uportal/io/event-aggregation" xmlns:ns5="https://source.jasig.org/schemas/uportal/io/subscribed-fragment" xmlns:ns6="https://source.jasig.org/schemas/uportal/io/stylesheet-descriptor" xmlns:ns7="https://source.jasig.org/schemas/uportal/io/permission-owner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns8="https://source.jasig.org/schemas/uportal/io/portlet-type">
+    <title>Sidebar Mobile Toggle</title>
+    <name>Sidebar Mobile Toggle</name>
+    <fname>sidebar-mobile-toggle</fname>
+    <desc>Sidebar Mobile Toggle for uPortal</desc>
+    <type>Portlet</type>
+    <timeout>5000</timeout>
+    <portlet-descriptor>
+        <ns2:webAppName>/SimpleContentPortlet</ns2:webAppName>
+        <ns2:portletName>cms</ns2:portletName>
+    </portlet-descriptor>
+    <group>Everyone</group>
+    <parameter>
+        <name>configurable</name>
+        <value>true</value>
+    </parameter>
+    <parameter>
+        <name>disableDynamicTitle</name>
+        <value>true</value>
+    </parameter>
+    <portlet-preference>
+        <name>content</name>
+        <readOnly>false</readOnly>
+        <value><![CDATA[
+            <div class="sidebar-mobile-toggle__container">
+                <a id="sidebar-menu-toggle-button" class="sidebar-mobile-toggle__button" href="#"><i class="fa fa-bars"></i></a>
+            </div>
+
+            <script>
+                // Sidebar toggle functionality
+                document.addEventListener('DOMContentLoaded', function() {
+                    var sidebarMenuToggleButton = document.getElementById('sidebar-menu-toggle-button');
+                    var sidebarMenu             = document.getElementById('region-sidebar-right');
+
+                    sidebarMenuToggleButton.addEventListener('click', function(event){
+                        event.preventDefault();
+
+                        sidebarMenuToggleButton.classList.toggle('is-open');
+                        sidebarMenu.classList.toggle('is-open');
+                    });
+                }, false);
+            </script>
+        ]]></value>
+    </portlet-preference>
+</portlet-definition>

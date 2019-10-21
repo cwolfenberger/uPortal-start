@@ -19,11 +19,11 @@
     under the License.
 
 -->
-<portlet-definition xmlns="https://source.jasig.org/schemas/uportal/io/portlet-definition" xmlns:ns2="https://source.jasig.org/schemas/uportal" xmlns:ns3="https://source.jasig.org/schemas/uportal/io/permission-owner" xmlns:ns4="https://source.jasig.org/schemas/uportal/io/stylesheet-descriptor" xmlns:ns5="https://source.jasig.org/schemas/uportal/io/portlet-type" xmlns:ns6="https://source.jasig.org/schemas/uportal/io/user" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0" xsi:schemaLocation="https://source.jasig.org/schemas/uportal/io/portlet-definition https://source.jasig.org/schemas/uportal/io/portlet-definition/portlet-definition-4.0.xsd">
-    <title>Portal Logo</title>
-    <name>Portal Logo</name>
-    <fname>portal-logo</fname>
-    <desc>Renders the portal logo at the top of the page</desc>
+<portlet-definition version="4.0" xsi:schemaLocation="https://source.jasig.org/schemas/uportal/io/portlet-definition https://source.jasig.org/schemas/uportal/io/portlet-definition/portlet-definition-4.0.xsd" xmlns:ns2="https://source.jasig.org/schemas/uportal" xmlns="https://source.jasig.org/schemas/uportal/io/portlet-definition" xmlns:ns4="https://source.jasig.org/schemas/uportal/io/user" xmlns:ns3="https://source.jasig.org/schemas/uportal/io/event-aggregation" xmlns:ns5="https://source.jasig.org/schemas/uportal/io/subscribed-fragment" xmlns:ns6="https://source.jasig.org/schemas/uportal/io/stylesheet-descriptor" xmlns:ns7="https://source.jasig.org/schemas/uportal/io/permission-owner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns8="https://source.jasig.org/schemas/uportal/io/portlet-type">
+    <title>Rice Info Box</title>
+    <name>Rice Info Box</name>
+    <fname>rice-info-box</fname>
+    <desc>An info box meant for the sidebar.</desc>
     <type>Portlet</type>
     <timeout>5000</timeout>
     <portlet-descriptor>
@@ -42,13 +42,12 @@
     <portlet-preference>
         <name>content</name>
         <readOnly>false</readOnly>
-        <value>
-            <![CDATA[
-                <h1 class="portal-logo">
-                    <img src='/uPortal/media/images/rice-logo.jpg' alt='Rice University Logo' />
-                    <a href='/uPortal'>Campus Portal</a>
-                </h1>
-            ]]>
-        </value>
+        <value><![CDATA[
+            <div class="rice-info-box">
+                <h6>Need Help?</h6>
+                <a class="button" href="#">Grant Process Guide</a>
+                <a href="#">Contacts &raquo;</a>
+            </div>
+        ]]></value>
     </portlet-preference>
 </portlet-definition>

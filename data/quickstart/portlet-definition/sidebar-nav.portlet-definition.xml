@@ -34,7 +34,7 @@
     <title>Sidebar Nav</title>
     <name>Sidebar Nav</name>
     <fname>sidebar-nav</fname>
-    <desc>Sidebar nav to sit mainly on right side region sidebar-right, controlled by sibling portlet sidebar-toggle</desc>
+    <desc>Sidebar nav to sit mainly on right side region sidebar-right.</desc>
     <type>Advanced CMS</type>
     <timeout>5000</timeout>
     <portlet-descriptor>
@@ -42,6 +42,11 @@
         <ns2:portletName>cms</ns2:portletName>
     </portlet-descriptor>
     <group>Everyone</group>
+    <permissions>
+        <permission system="UP_PORTLET_SUBSCRIBE" activity="BROWSE">
+            <group>Everyone</group>
+        </permission>
+    </permissions>
     <parameter>
         <name>alternate</name>
         <value>false</value>
@@ -93,8 +98,7 @@
             <![CDATA[
                 <script src="/resource-server/webjars/vue/dist/vue.min.js"></script>
                 <script src="/resource-server/webjars/uportal__sidebar-nav/dist/sidebar-nav.min.js" defer></script>
-
-                <sidebar-nav portlet-api-url="/uPortal/api/v4-3/dlm/portletRegistry.json"></sidebar-nav>
+                <sidebar-nav></sidebar-nav>
             ]]>
         </value>
     </portlet-preference>

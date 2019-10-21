@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+    Licensed to Apereo under one or more contributor license
+    agreements. See the NOTICE file distributed with this work
+    for additional information regarding copyright ownership.
+    Apereo licenses this file to you under the Apache License,
+    Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License.  You may obtain a
+    copy of the License at the following location:
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<portlet-definition version="4.0" xsi:schemaLocation="https://source.jasig.org/schemas/uportal/io/portlet-definition https://source.jasig.org/schemas/uportal/io/portlet-definition/portlet-definition-4.0.xsd" xmlns:ns2="https://source.jasig.org/schemas/uportal" xmlns="https://source.jasig.org/schemas/uportal/io/portlet-definition" xmlns:ns4="https://source.jasig.org/schemas/uportal/io/user" xmlns:ns3="https://source.jasig.org/schemas/uportal/io/event-aggregation" xmlns:ns5="https://source.jasig.org/schemas/uportal/io/subscribed-fragment" xmlns:ns6="https://source.jasig.org/schemas/uportal/io/stylesheet-descriptor" xmlns:ns7="https://source.jasig.org/schemas/uportal/io/permission-owner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns8="https://source.jasig.org/schemas/uportal/io/portlet-type">
+    <title>Rice Footer</title>
+    <name>Rice Footer</name>
+    <fname>rice-footer</fname>
+    <desc>Rice footer for uPortal</desc>
+    <type>Portlet</type>
+    <timeout>5000</timeout>
+    <portlet-descriptor>
+        <ns2:webAppName>/SimpleContentPortlet</ns2:webAppName>
+        <ns2:portletName>cms</ns2:portletName>
+    </portlet-descriptor>
+    <group>Everyone</group>
+    <parameter>
+        <name>configurable</name>
+        <value>true</value>
+    </parameter>
+    <parameter>
+        <name>disableDynamicTitle</name>
+        <value>true</value>
+    </parameter>
+    <portlet-preference>
+        <name>content</name>
+        <readOnly>false</readOnly>
+        <value><![CDATA[
+            <div class="container rice-footer">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <nav class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action" href="#">Terms of Use</a>
+                            <a class="list-group-item list-group-item-action" href="#">Privacy Policy</a>
+                            <a class="list-group-item list-group-item-action" href="#">Accessibility Statement</a>
+                            <a class="list-group-item list-group-item-action" href="#">Contact Us</a>
+                        </nav>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <div class="license">
+                            <div class="license-icons">
+                                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" title="Creative Commons Attribution 4.0 International license">
+                                    <i class="fab fa-creative-commons"></i>
+                                    <i class="fab fa-creative-commons-by"></i>
+                                </a>
+                            </div>
+                            <p>Except where <a href="#">otherwise noted</a>, content created on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>.</p>
+                        </div>
+                        <div class="sponsor">
+                            <p>Crafted with love and care, please use responsibly.</p>
+                        </div>
+                        <div class="social-media">
+                            <ul class="list-unstyled list-inline">
+                                <li>
+                                    <a href="https://www.facebook.com/UniconNet" target="_blank" class="ext" rel="noopener noreferrer"><i class="fab fa-facebook"><span class="sr-only">facebook</span></i><span class="ext" aria-label="(link is external)"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/unicon" target="_blank" class="ext" rel="noopener noreferrer"><i class="fab fa-twitter"><span class="sr-only">twitter</span></i><span class="ext" aria-label="(link is external)"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/company/unicon-inc" target="_blank" class="ext" rel="noopener noreferrer"><i class="fab fa-linkedin"><span class="sr-only">linkedin</span></i><span class="ext" aria-label="(link is external)"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/user/UNICONnet" target="_blank" class="ext" rel="noopener noreferrer"><i class="fab fa-youtube"><span class="sr-only">youtube</span></i><span class="ext" aria-label="(link is external)"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // Display initials instead of full name in header user-name
+                document.addEventListener('DOMContentLoaded', function() {
+                    var userNameContainer = document.querySelectorAll('.user-name')[0];
+                    var notificationIconContainer = document.querySelectorAll('.notification-icon')[0];
+
+                    if (typeof userNameContainer !== 'undefined') {
+                        document.querySelectorAll('.user-name .hidden-xs')[0].remove();
+
+                        var name = userNameContainer.textContent.replace(/(?:^[\s\u00a0]+)|(?:[\s\u00a0]+$)/g, '');
+                        var data = name.split(' ');
+
+                        var output = "";
+                        for ( var i = 0; i < data.length; i++) {
+                            output += data[i].substring(0,1);
+                        }
+
+                        userNameContainer.innerHTML=output;
+                        userNameContainer.style.visibility = "visible";
+                    }
+
+                    if (typeof notificationIconContainer !== 'undefined') {
+                        var notificationStyle = document.createElement( 'style' );
+                        notificationStyle.innerHTML = 'svg[data-icon="bell"] { color: #C1C6C8 !important; }';
+                        document.getElementsByTagName('notification-icon')[0].shadowRoot.appendChild( notificationStyle );
+                    }
+                }, false);
+            </script>
+        ]]></value>
+    </portlet-preference>
+</portlet-definition>
