@@ -98,7 +98,7 @@
             <![CDATA[
                 <script src="/resource-server/webjars/vue/dist/vue.min.js"></script>
                 <script src="/resource-server/webjars/uportal__sidebar-nav/dist/sidebar-nav.min.js" defer></script>
-                <sidebar-nav></sidebar-nav>
+                <sidebar-nav link-data-url="/uPortal/media/json/linkData.json"></sidebar-nav>
             ]]>
         </value>
     </portlet-preference>
